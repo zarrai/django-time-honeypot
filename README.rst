@@ -11,7 +11,7 @@ Usage
 settings.py
 -----------
 
-Be sure to add ``honeypot`` to ``INSTALLED_APPS`` in settings.py.
+Be sure to add ``honeypot`` to ``INSTALLED_APPS`` and ``honeypot.middleware.HoneypotMiddleware`` to ``MIDDLEWARE`` in settings.py.
 
 You will almost always need to define ``HONEYPOT_FIELD_NAME`` which is the name to use for the honeypot field.  Some sophisticated bots will attempt to avoid fields named honeypot, so it may be wise to name the field something slightly more realistic such as "phonenumber" or "body2".
 
