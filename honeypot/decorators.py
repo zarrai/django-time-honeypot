@@ -18,7 +18,7 @@ def honeypot_verifier(val):
     now = datetime.datetime.now()
     duration = now - delivery
     min_duration = datetime.timedelta(seconds= getattr(settings, 'MIN_DURATION', 2))
-    max_duration = datetime.timedelta(seconds= getattr(settings, 'MAX_DURATION', 3))
+    max_duration = datetime.timedelta(seconds= getattr(settings, 'MAX_DURATION', 3600))
     if duration < min_duration or duration > max_duration:
         return False
     return True
